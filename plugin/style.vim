@@ -12,11 +12,6 @@ set wrap!
 
 set termguicolors
 set t_Co=256
-"if !exists('g:syntax_on')
-	"syntax enable
-"endif
-
-set termguicolors
 
 if &diff
 	colorscheme evening

@@ -7,8 +7,8 @@ source <sfile>:h/plugin/custom.vim
 source <sfile>:h/plugin/nvim-tree.vim
 source <sfile>:h/plugin/style.vim
 source <sfile>:h/plugin/telescope.vim
-source <sfile>:h/plugin/ctrlsf.vim
-source <sfile>:h/plugin/lsp.vim
+"source <sfile>:h/plugin/ctrlsf.vim
+"source <sfile>:h/plugin/lsp.vim
 lua require('lspconfig').clangd.setup{…}
 
 "easy-align

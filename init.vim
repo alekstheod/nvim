@@ -1,4 +1,5 @@
 lua require('plugins')
+syntax on
 
 source <sfile>:h/plugin/autoformat.vim
 source <sfile>:h/plugin/bindings.vim
@@ -26,8 +27,6 @@ let mapleader=" "
 
 set mouse=n
 filetype plugin on
-
-syntax on
 
 set noautochdir
 

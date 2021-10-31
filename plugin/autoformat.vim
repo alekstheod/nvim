@@ -1,8 +1,4 @@
-"au BufWrite * :Autoformat
-function! Touch()
-	let result=system('touch '.expand("%"))
-endfunction
-
+au BufWrite * :Autoformat
 let g:formatdef_buildifier = '"buildifier"'
 let g:formatters_buildifier = ['buildifier']
 

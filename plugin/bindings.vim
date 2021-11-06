@@ -1,4 +1,3 @@
-command! Q :qa!
 nnoremap <F7> :match StatusLineTerm /<C-R><C-W>/<CR>
 nnoremap <silent> yf :let @+=join([expand('%'),  line(".")], ':')<CR>
 nnoremap <C-Up> :resize -5<CR>
@@ -13,7 +12,7 @@ nnoremap <Up> <C-w>k
 nnoremap <Down> <C-w>j
 nnoremap <Left> <C-w>h
 nnoremap <Right> <C-w>l
-nnoremap <c-q> :bd!<cr>
+nnoremap <c-q> :Bdelete!<cr>
 vnoremap <c-y> "+y
 nnoremap <c-y> :let @+ = expand("%")<cr>
 nnoremap <c-c> <c-w>c
@@ -27,3 +26,4 @@ inoremap <silent><C-S>         <C-O>:update!<CR><Esc>
 
 nnoremap <S-Tab> :bn<CR>
 command! Q :qa!
+command! E :e!

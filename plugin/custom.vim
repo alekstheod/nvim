@@ -52,7 +52,7 @@ command! -nargs=1 BD :call DeleteBuffers(<f-args>)
 function! DeleteBuffersFzf()
 	let s:bufnumbers = filter(range(1, bufnr('$')), 'buflisted(v:val)')
 	let s:buffers = map(s:bufnumbers, 'bufname(v:val)')
-	call fzf#run(fzf#wrap({'source': s:buffers, 'options': '-m', 'sink': 'bd!'}))
+	call fzf#run(fzf#wrap({'source': s:buffers, 'options': '-m', 'sink': 'Bdelete!'}))
 endfunction
 nmap <leader>bb :call DeleteBuffersFzf()<CR>
 vmap <leader>bb :call DeleteBuffersFzf()<CR>

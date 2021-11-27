@@ -24,3 +24,5 @@ EOF
 nnoremap <leader><leader> :lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({}))<CR>
 " Change an option
 nnoremap <leader><leader> :lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ winblend = 10 }))<CR>
+nmap <leader>re :Telescope oldfiles<CR>
+vmap <leader>re :Telescope oldfiles<CR>

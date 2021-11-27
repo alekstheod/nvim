@@ -44,7 +44,10 @@ return require("packer").startup(
 		use {"junegunn/vim-easy-align"}
 
 		-- appearance
-		use {"sheerun/vim-polyglot"}
+		use {
+			'nvim-treesitter/nvim-treesitter',
+			run = ':TSUpdate'
+		}
 		use {
 			"nvim-lualine/lualine.nvim",
 			config = function()
@@ -63,7 +66,6 @@ return require("packer").startup(
 				require "config.bufferline".setup()
 			end
 		}
-		use {"octol/vim-cpp-enhanced-highlight"}
 
 		-- filetree
 		use {

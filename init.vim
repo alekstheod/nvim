@@ -1,8 +1,9 @@
 lua require('plugins')
 syntax on
 
-lua require('lspconfig').clangd.setup{…}
-lua require('lspconfig').bashls.setup{…}
+lua require('lspconfig').clangd.setup{}
+lua require('lspconfig').bashls.setup{}
+lua require('lspconfig').java_language_server.setup{}
 
 "easy-align
 xmap ga <Plug>(EasyAlign)

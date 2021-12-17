@@ -42,9 +42,29 @@ return require("packer").startup(
         -- use {'ggandor/lightspeed.nvim', config = function() require'lightspeed'.setup({}) end }
         use {"junegunn/vim-easy-align"}
 
-        -- surround
-        use {"tpope/vim-repeat"}
-        use {"tpope/vim-surround"}
+	-- treesitter
+	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require'config.treesitter'.setup() end }
+	use {'nvim-treesitter/nvim-treesitter-textobjects'}
+
+	-- appearance
+	use {
+		"nvim-lualine/lualine.nvim",
+		config = function()
+			require "config.lualine".setup()
+		end
+	}
+	use {
+		"kyazdani42/nvim-web-devicons",
+		config = function()
+			require "nvim-web-devicons".setup()
+		end
+	}
+	use {
+		"akinsho/nvim-bufferline.lua",
+		config = function()
+			require "config.bufferline".setup()
+		end
+	}
 
         -- appearance
         use {

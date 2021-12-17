@@ -1,59 +1,52 @@
 "Terdebug
-packadd termdebug
+"packadd termdebug
 
-function! GetVisualSelection()
-	" Why is this not a built-in Vim script function?!
-	let [line_start, column_start] = getpos("'<")[1:2]
-	let [line_end, column_end] = getpos("'>")[1:2]
-	let lines = getline(line_start, line_end)
-	if len(lines) == 0
-		return ''
-	endif
-	let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
-	let lines[0] = lines[0][column_start - 1:]
-	return join(lines, "\n")
-endfunction
+"function! GetVisualSelection()
+	"" Why is this not a built-in Vim script function?!
+	"let [line_start, column_start] = getpos("'<")[1:2]
+	"let [line_end, column_end] = getpos("'>")[1:2]
+	"let lines = getline(line_start, line_end)
+	"if len(lines) == 0
+		"return ''
+	"endif
+	"let lines[-1] = lines[-1][: column_end - (&selection == 'inclusive' ? 1 : 2)]
+	"let lines[0] = lines[0][column_start - 1:]
+	"return join(lines, "\n")
+"endfunction
 
-function! EvalGdb()
-	let selection = GetVisualSelection()
-	let word = expand("<cword>")
-	:call TermDebugSendCommand("print ".word)
-endfunction
+"function! EvalGdb()
+	"let selection = GetVisualSelection()
+	"let word = expand("<cword>")
+	":call TermDebugSendCommand("print ".word)
+"endfunction
 
-function! VEvalGdb()
-	let word = GetVisualSelection()
-	:call TermDebugSendCommand("print ".word)
-endfunction
+"function! VEvalGdb()
+	"let word = GetVisualSelection()
+	":call TermDebugSendCommand("print ".word)
+"endfunction
 
-vnoremap <silent> ev :call VEvalGdb()<CR>
+"vnoremap <silent> ev :call VEvalGdb()<CR>
 
-function! SetupGdb(...)
-	:call TermDebugSendCommand("set confirm off")
-	:call TermDebugSendCommand("set pretty on")
-	:call TermDebugSendCommand("file ".a:1)
-endfunction
+"function! SetupGdb(...)
+	":call TermDebugSendCommand("set confirm off")
+	":call TermDebugSendCommand("set pretty on")
+	":call TermDebugSendCommand("file ".a:1)
+"endfunction
 
-let g:termdebug_useFloatingHover = 0
+"let g:termdebug_useFloatingHover = 0
 
-nnoremap <silent> ev :call EvalGdb()<CR>
-autocmd filetype cpp nnoremap <F3>  :Termdebug %:r<CR><c-w>j<c-w>c<c-w>L
-autocmd filetype cpp nnoremap <F4>	:call SetupGdb("test")<CR>
-autocmd filetype cpp nnoremap <F5>	:Continue<CR>
-autocmd filetype cpp nnoremap <F10> :Over<CR>
-autocmd filetype cpp nnoremap <F11> :Step<CR>
-autocmd filetype cpp nnoremap <kInsert> :Break<CR>
-autocmd filetype cpp nnoremap <kDelete> :Clear<CR>
-autocmd filetype cpp nnoremap <silent> so :Over<CR>
-autocmd filetype cpp noremap <silent> si :Step<CR>
-autocmd filetype cpp nnoremap <silent> co :Continue<CR>
-autocmd filetype cpp nnoremap <silent> bp :Break<CR>
-
-" cpp highlight config
-let g:cpp_member_variable_highlight = 1
-let g:cpp_class_scope_highlight = 1
-let g:cpp_class_decl_highlight = 1
-let g:cpp_posix_standard = 1
-let c_no_curly_error=1
+"nnoremap <silent> ev :call EvalGdb()<CR>
+"autocmd filetype cpp nnoremap <F3>  :Termdebug %:r<CR><c-w>j<c-w>c<c-w>L
+"autocmd filetype cpp nnoremap <F4>	:call SetupGdb("test")<CR>
+"autocmd filetype cpp nnoremap <F5>	:Continue<CR>
+"autocmd filetype cpp nnoremap <F10> :Over<CR>
+"autocmd filetype cpp nnoremap <F11> :Step<CR>
+"autocmd filetype cpp nnoremap <kInsert> :Break<CR>
+"autocmd filetype cpp nnoremap <kDelete> :Clear<CR>
+"autocmd filetype cpp nnoremap <silent> so :Over<CR>
+"autocmd filetype cpp noremap <silent> si :Step<CR>
+"autocmd filetype cpp nnoremap <silent> co :Continue<CR>
+"autocmd filetype cpp nnoremap <silent> bp :Break<CR>
 
 " copy paste cpp include
 function! PasteInclude()

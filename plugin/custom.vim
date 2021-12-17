@@ -17,33 +17,18 @@ function! GetVisualSelection()
 	return join(lines, "\n")
 endfunction
 
-"insert path
-function! Paste(value)
-	:call setreg('p', a:value)
-	:norm "ppa
-endfunction
-
-function! InsertPath()
-	call fzf#run({'sink': function('Paste')})
-endfunction
-
-imap <C-F> <ESC>:call InsertPath()<CR>
-
-function! ExtractText(key, value)
-	return a:value['text']
-endfunction
-
-function! DeleteBuffers(ext)
-	let s:buffers = filter(range(1, bufnr('$')), 'buflisted(v:val) && bufname(v:val) =~ "\.'.a:ext.'$"')
-	if empty(s:buffers) | throw "no *.".a:ext." buffer" | endif
-	exe 'bd! '.join(s:buffers, ' ')
-endfunction
-
-command! -nargs=1 BD :call DeleteBuffers(<f-args>)
-
 function! TrimCwd(id, str)
 	let cwd = getcwd()
 	let trimed =  trim(a:str)
 	let result = substitute(trim(a:str), cwd.'/', '', '')
 	return result
+endfunction
+
+function! Paste(value)
+	:call setreg('p', a:value)
+	:norm "ppa
+endfunction
+
+function! Reverse(value)
+    return join(reverse(split(a:value, '.\zs')), '')
 endfunction

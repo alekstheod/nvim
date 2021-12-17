@@ -1,9 +1,4 @@
 lua require('plugins')
-syntax on
-
-lua require('lspconfig').clangd.setup{}
-lua require('lspconfig').bashls.setup{}
-lua require('lspconfig').java_language_server.setup{}
 
 "easy-align
 xmap ga <Plug>(EasyAlign)
@@ -19,9 +14,15 @@ let g:mkdp_auto_close = 1
 let mapleader=" "
 
 set mouse=n
-filetype plugin on
+set tabstop=4 
+set expandtab
 
 set noautochdir
 
+let g:rooter_patterns = ['Rakefile']
+
 " Required for operations modifying multiple buffers like rename.
 set hidden
+
+filetype plugin on
+syntax on

@@ -1,5 +1,3 @@
-inoremap <C-Space> <Esc>:call ToggleTree()<CR>zz
-=======
 function! OpenTree()
 	if @% == ""
 		NvimTreeToggle

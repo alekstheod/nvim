@@ -37,10 +37,12 @@ return require("packer").startup(
         use {"scrooloose/nerdcommenter"}
         use {"airblade/vim-rooter"}
         use {"dyng/ctrlsf.vim"}
+        use {"mechatroner/rainbow_csv"}
         -- use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
         -- use {'junegunn/fzf.vim'}
         -- use {'ggandor/lightspeed.nvim', config = function() require'lightspeed'.setup({}) end }
         use {"junegunn/vim-easy-align"}
+        use {"folke/which-key.nvim", config = function() require("which-key").setup {}end}
 
 	-- treesitter
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require'config.treesitter'.setup() end }
@@ -116,6 +118,8 @@ return require("packer").startup(
         -- git
         use {"tpope/vim-fugitive"}
         use {"itchyny/vim-gitbranch"}
+        use {"tyru/open-browser.vim"}
+        use {"tyru/open-browser-github.vim"}
 
         -- autoformat
         use {"Chiel92/vim-autoformat"}

@@ -4,6 +4,7 @@ syntax on
 lua require('lspconfig').clangd.setup{}
 lua require('lspconfig').bashls.setup{}
 lua require('lspconfig').jdtls.setup{}
+lua require('lspconfig').solargraph.setup{}
 
 "easy-align
 xmap ga <Plug>(EasyAlign)

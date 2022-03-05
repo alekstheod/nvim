@@ -44,60 +44,30 @@ return require("packer").startup(
         use {"junegunn/vim-easy-align"}
         use {"folke/which-key.nvim", config = function() require("which-key").setup {}end}
 
-	-- treesitter
-	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require'config.treesitter'.setup() end }
-	use {'nvim-treesitter/nvim-treesitter-textobjects'}
-
-	-- appearance
-	use {
-		"nvim-lualine/lualine.nvim",
-		config = function()
-			require "config.lualine".setup()
-		end
-	}
-	use {
-		"kyazdani42/nvim-web-devicons",
-		config = function()
-			require "nvim-web-devicons".setup()
-		end
-	}
-	use {
-		"akinsho/nvim-bufferline.lua",
-		config = function()
-			require "config.bufferline".setup()
-		end
-	}
-
+        -- treesitter
+        use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require'config.treesitter'.setup() end }
+        use {'nvim-treesitter/nvim-treesitter-textobjects'}
+        use {"nvim-treesitter/playground"}
+        
         -- appearance
         use {
-            "nvim-lualine/lualine.nvim",
-            config = function()
-                require "config.lualine".setup()
-            end
+        	"nvim-lualine/lualine.nvim",
+        	config = function()
+        		require "config.lualine".setup()
+        	end
         }
         use {
-            "kyazdani42/nvim-web-devicons",
-            config = function()
-                require "nvim-web-devicons".setup()
-            end
+        	"kyazdani42/nvim-web-devicons",
+        	config = function()
+        		require "nvim-web-devicons".setup()
+        	end
         }
         use {
-            "akinsho/nvim-bufferline.lua",
-            config = function()
-                require "config.bufferline".setup()
-            end
+        	"akinsho/nvim-bufferline.lua",
+        	config = function()
+        		require "config.bufferline".setup()
+        	end
         }
-        use {
-            "nvim-treesitter/nvim-treesitter",
-            run = ":TSUpdate",
-            config = function()
-                require "config.treesitter".setup()
-            end
-        }
-        use {"nvim-treesitter/nvim-treesitter-textobjects"}
-        use {"nvim-treesitter/playground"}
-
-        --use {"octol/vim-cpp-enhanced-highlight"}
 
         -- filetree
         use {
@@ -163,7 +133,6 @@ return require("packer").startup(
         --require "config.treesitter".setup()
         --end
         --}
-        --use {"nvim-treesitter/nvim-treesitter-textobjects"}
         --use {"nvim-treesitter/playground"}
 
         -- trouble
@@ -179,10 +148,6 @@ return require("packer").startup(
             "neovim/nvim-lspconfig",
             "williamboman/nvim-lsp-installer"
         }
-        use {
-            "ray-x/lsp_signature.nvim"
-        }
-        use {"aymericbeaumet/vim-symlink"}
         use {
             "ray-x/lsp_signature.nvim",
             config = function()

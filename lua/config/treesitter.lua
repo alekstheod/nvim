@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup()
     require "nvim-treesitter.configs".setup {
-      ensure_installed = { "cpp", "lua", "ruby", "python", "javascript" },
+      ensure_installed = { "cpp", "lua", "ruby", "python", "javascript", "typescript" },
       highlight = { enable = true },
       textobjects = {
         select = {

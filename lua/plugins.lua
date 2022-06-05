@@ -67,9 +67,9 @@ return require("packer").startup(
         use {"tyru/open-browser-github.vim"}
 
         -- autoformat
-        use {"Chiel92/vim-autoformat"}
         use {"google/vim-maktaba"}
-        --use {'google/vim-codefmt'}
+        use {'sbdchd/neoformat'}
+        --use {"Chiel92/vim-autoformat"}
         --use {'google/vim-glaive'}
 
         -- bazel

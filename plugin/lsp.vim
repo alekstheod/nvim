@@ -2,7 +2,7 @@ lua require('lspconfig').bashls.setup{}
 lua require('lspconfig').clangd.setup{}
 lua require('lspconfig').jdtls.setup{}
 lua require('lspconfig').pylsp.setup{}
-lua require('lspconfig').solargraph.setup{}
+lua require('lspconfig').sorbet.setup{}
 lua require('lspconfig').tsserver.setup{}
 
 nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>

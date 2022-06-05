@@ -1,10 +1,5 @@
 lua require('plugins')
 
-lua require('lspconfig').clangd.setup{}
-lua require('lspconfig').bashls.setup{}
-lua require('lspconfig').jdtls.setup{}
-lua require('lspconfig').solargraph.setup{}
-
 "easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
@@ -19,7 +14,7 @@ let g:mkdp_auto_close = 1
 let mapleader=" "
 
 set mouse=n
-set tabstop=4 
+set tabstop=4
 set expandtab
 
 set noautochdir

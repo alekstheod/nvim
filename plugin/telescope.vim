@@ -39,6 +39,7 @@ end
 
 require('telescope').setup{
 defaults = {
+    file_ignore_patterns = {"sorbet/*", "tmp/.*", "vendor/.*", ".git/.*", "bin/.*", "log/.*", ".bundle/.*"},
 	mappings = {
 		i = {
 			["<esc>"] = actions.close,

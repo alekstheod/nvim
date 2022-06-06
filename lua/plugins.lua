@@ -83,7 +83,7 @@ return require("packer").startup(function(use)
 
 	-- autoformat
 	use({ "google/vim-maktaba" })
-	use({ "sbdchd/neoformat" })
+	use({ "atshopify/neoformat" })
 	--use {"Chiel92/vim-autoformat"}
 	--use {'google/vim-glaive'}
 

@@ -8,12 +8,12 @@ function M.grep_at_current_tree_node()
 	require("telescope.builtin").live_grep({ search_dirs = { node.absolute_path } })
 end
 
-function M.git_add_file()
+function M.run_vim_command(command)
 	local node = require("nvim-tree.lib").get_node_at_cursor()
 	if not node then
 		return
 	end
-	vim.cmd("G add -f " .. node.absolute_path)
+	vim.cmd(command .. " " .. node.absolute_path)
 end
 
 function M.setup()
@@ -37,7 +37,12 @@ function M.setup()
 					},
 					{
 						key = { "<Leader>ga", "ga" },
-						cb = ":lua require'config.nvimtree'.git_add_file()<CR>",
+						cb = ":lua require'config.nvimtree'.run_vim_command(':G add -f')<CR>",
+						mode = "n",
+					},
+					{
+						key = { "<Leader>ga", "gd" },
+						cb = ":lua require'config.nvimtree'.run_vim_command(':G reset')<CR>",
 						mode = "n",
 					},
 				},

@@ -34,6 +34,8 @@ function M.setup()
 						key = { "<Leader>gr", "gr" },
 						cb = ":lua require'config.nvimtree'.grep_at_current_tree_node()<CR>",
 						mode = "n",
+					},
+					{
 						key = { "<Leader>ga", "ga" },
 						cb = ":lua require'config.nvimtree'.git_add_file()<CR>",
 						mode = "n",

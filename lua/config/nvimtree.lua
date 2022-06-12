@@ -31,18 +31,23 @@ function M.setup()
 			mappings = {
 				list = {
 					{
-						key = { "<Leader>gr", "gr" },
+						key = { "<leader>ag" },
 						cb = ":lua require'config.nvimtree'.grep_at_current_tree_node()<CR>",
 						mode = "n",
 					},
 					{
-						key = { "<Leader>ga", "ga" },
+						key = { "<leader>ga" },
 						cb = ":lua require'config.nvimtree'.run_vim_command(':G add -f')<CR>",
 						mode = "n",
 					},
 					{
-						key = { "<Leader>ga", "gd" },
+						key = { "<leader>gr" },
 						cb = ":lua require'config.nvimtree'.run_vim_command(':G reset')<CR>",
+						mode = "n",
+					},
+					{
+						key = { "<leader>gc" },
+						cb = ":lua require'config.nvimtree'.run_vim_command(':G checkout')<CR>",
 						mode = "n",
 					},
 				},

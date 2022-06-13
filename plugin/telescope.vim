@@ -1,5 +1,5 @@
 nnoremap <Tab> :lua require('telescope.builtin').buffers(require('telescope.themes').get_ivy({ winblend = 10 }))<CR>
-nnoremap <S-f> :lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy({ winblend = 10 }))<CR>
+nnoremap <S-f> :lua require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({ winblend = 10 }))<CR>
 
 function! GrepFor(arg)
     :lua require('telescope.builtin').grep_string(require('telescope.themes').get_ivy({ winblend = 10, search=vim.fn.eval('a:arg') }))

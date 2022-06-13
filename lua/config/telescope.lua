@@ -26,7 +26,6 @@ end
 function M.setup()
 	require("telescope").setup({
 		defaults = {
-			file_ignore_patterns = { "sorbet/*", "tmp/.*", "vendor/.*", ".git/.*", "bin/.*", "log/.*", ".bundle/.*" },
 			mappings = {
 				i = {
 					["<esc>"] = actions.close,
@@ -37,7 +36,7 @@ function M.setup()
 				},
 			},
 		},
-		file_ignore_patterns = { "vendor/.*", ".git/.*", "bin/.*", "log/.*", ".bundle/.*" },
+        file_ignore_patterns = {"eagerlib/*", "tmp/.*", "sorbet/*", "vendor/.*", ".git/.*", ".*/bin/.*", ".*/log/.*", ".bundle/.*" },
 		extensions = {
 			fzf = {
 				fuzzy = true, -- false will only do exact matching

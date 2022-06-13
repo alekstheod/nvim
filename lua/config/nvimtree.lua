@@ -5,7 +5,7 @@ function M.grep_at_current_tree_node()
 	if not node then
 		return
 	end
-    require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({ winblend = 10, search_dirs={node.absolute_path}
+    require('telescope.builtin').live_grep(require('telescope.themes').get_ivy({ winblend = 10, search_dirs={node.absolute_path}}))
 end
 
 function M.run_vim_command(command)

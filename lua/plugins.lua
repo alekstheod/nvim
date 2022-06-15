@@ -164,4 +164,7 @@ return require("packer").startup(function(use)
 	-- snippets
 	use({ "hrsh7th/vim-vsnip" })
 	use({ "rafamadriz/friendly-snippets" })
+
+    -- rails
+    use({ "tpope/vim-rails "})
 end)

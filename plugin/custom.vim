@@ -4,16 +4,12 @@ endfunction
 
 nnoremap <c-\> :call Touch()<CR>
 
-function! GetFileRef()
-    return join([expand('%'),  line(".")], ':')
-endfunction
-
 function! SaveToVimClipboard(text)
     :call writefile([a:text], '/tmp/vim_clipboard', 'a')
 endfunction
 
 function! YankFilePath()
-    :let path=GetFileRef()
+    :let path=expand('%')
     :let @+=path
     :call SaveToVimClipboard(path)
 endfunction

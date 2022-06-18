@@ -9,7 +9,7 @@ function! GetFileRef()
 endfunction
 
 function! SaveToVimClipboard(text)
-    :call writefile([a:text], '/tmp/vim_clipboard')
+    :call writefile([a:text], '/tmp/vim_clipboard', 'a')
 endfunction
 
 function! YankFilePath()

@@ -27,7 +27,7 @@ function M.setup()
 			timeout = 400,
 		},
 		view = {
-			width = 60,
+			width = 30,
 			mappings = {
 				list = {
 					{

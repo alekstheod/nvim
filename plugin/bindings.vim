@@ -1,5 +1,5 @@
 nnoremap <F7> :match StatusLineTerm /<C-R><C-W>/<CR>
-nnoremap <c-y> :let @+=join([expand('%'),  line(".")], ':')<CR>
+nnoremap <c-y> :call YankFilePath()<CR>
 nnoremap <C-Up> :resize -5<CR>
 nnoremap <C-Down> :resize +5<CR>
 nnoremap <C-Right> :vertical resize +5<CR>
@@ -13,7 +13,7 @@ nnoremap <Down> <C-w>j
 nnoremap <Left> <C-w>h
 nnoremap <Right> <C-w>l
 nnoremap <c-q> :Bdelete!<cr>
-vnoremap <c-y> "+y
+vnoremap <c-y> :call YankToSystemClipboard()<CR>
 "nnoremap <c-y> :let @+ = expand("%")<cr>
 nnoremap <c-c> <c-w>c
 nnoremap <c-\> :call Touch()<CR>

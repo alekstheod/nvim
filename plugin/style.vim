@@ -15,8 +15,8 @@ set termguicolors
 set cursorline
 
 if &diff
-	colorscheme evening
+    colorscheme evening
 else
-	let g:dracula_colorterm = 1
-	colorscheme dracula
+    "let g:dracula_colorterm = 1
+    colorscheme PaperColor
 endif

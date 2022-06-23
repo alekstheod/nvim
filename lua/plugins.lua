@@ -41,6 +41,7 @@ return require("packer").startup(function(use)
 	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
 	-- appearance
+    use({ "rafi/awesome-vim-colorschemes" })
 	use({
 		"nvim-lualine/lualine.nvim",
 		config = function()
@@ -166,5 +167,5 @@ return require("packer").startup(function(use)
 	use({ "rafamadriz/friendly-snippets" })
 
     -- rails
-    use({ "tpope/vim-rails "})
+    use({ "tpope/vim-rails"})
 end)

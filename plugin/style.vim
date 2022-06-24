@@ -6,7 +6,7 @@ set shiftwidth=4
 set tabstop=4
 set incsearch
 set termguicolors
-set t_Co=256
+"set t_Co=256
 "if !exists('g:syntax_on')
 "syntax enable
 "endif
@@ -18,5 +18,5 @@ if &diff
     colorscheme evening
 else
     "let g:dracula_colorterm = 1
-    colorscheme PaperColor
+    colorscheme custom_paper_color
 endif

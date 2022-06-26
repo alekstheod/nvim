@@ -14,7 +14,8 @@ let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_typescriptreact = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_lua = ['stylua']
-let g:neoformat_enabled_cpp = ['clang-format']
+let g:neoformat_enabled_cpp = ['clangformat']
+let g:neoformat_enabled_c = ['clangformat']
 
 "let g:neoformat_only_msg_on_error = 1
 "let g:neoformat_verbose = 1

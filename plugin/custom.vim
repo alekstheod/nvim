@@ -6,6 +6,7 @@ nnoremap <c-\> :call Touch()<CR>
 
 function! SaveToVimClipboard(text)
     :call writefile([a:text], '/tmp/vim_clipboard', 'a')
+    :call system("echo '".a:text."' | pbcopy")
 endfunction
 
 function! YankFilePath()

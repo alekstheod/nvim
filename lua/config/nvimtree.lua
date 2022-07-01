@@ -14,6 +14,7 @@ function M.run_vim_command(command)
 		return
 	end
 	vim.cmd(command .. " " .. node.absolute_path)
+    require("nvim-tree.actions.reloaders").reload_explorer()
 end
 
 function M.setup()

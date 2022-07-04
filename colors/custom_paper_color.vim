@@ -127,7 +127,7 @@ fun! s:register_default_theme()
                 \     'NO_CONVERSION': 1,
                 \     'TEST_256_COLOR_CONSISTENCY' : 1,
                 \     'palette' : {
-                    \       'color00' : ['#121212', '234'],
+                    \       'color00' : ['#1c1c2c', '234'],
                     \       'color01' : ['#af005f', '125'],
                     \       'color02' : ['#5faf00', '70'],
                     \       'color03' : ['#d7af5f', '179'],
@@ -156,7 +156,7 @@ fun! s:register_default_theme()
                     \       'search_fg' : ['#000000', '16'],
                     \       'search_bg' : ['#00875f', '29'],
                     \       'linenumber_fg' : ['#585858', '240'],
-                    \       'linenumber_bg' : ['#121212', '234'],
+                    \       'linenumber_bg' : ['#1c1c2c', '234'],
                     \       'vertsplit_fg' : ['#5f8787', '66'],
                     \       'vertsplit_bg' : ['#1c1c1c', '234'],
                     \       'statusline_active_fg' : ['#1c1c1c', '234'],

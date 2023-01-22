@@ -23,12 +23,6 @@ return require("packer").startup(function(use)
 	use({ "dyng/ctrlsf.vim" })
 	use({ "mechatroner/rainbow_csv" })
 	use({ "junegunn/vim-easy-align" })
-	use({
-		"folke/which-key.nvim",
-		config = function()
-			require("which-key").setup({})
-		end,
-	})
 
 	-- treesitter
 	use({

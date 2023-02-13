@@ -10,7 +10,7 @@ endfunction
 
 function! YankFilePath()
     :let path=expand('%')
-    :let @+=path
+    :let @+=join([path,  line(".")], ':')
     :call SaveToVimClipboard(path)
 endfunction
 

@@ -1,5 +1,5 @@
 set number
-set relativenumber
+"set relativenumber
 set wrap!
 set encoding=UTF-8
 set shiftwidth=4

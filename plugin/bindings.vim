@@ -30,3 +30,6 @@ command! E :e!
 vnoremap p "_dP
 "nnoremap p "0p
 "vnoremap p "0p
+inoremap <leader>tt :call OpenTree()<CR>
+noremap <leader>tt :call OpenTree()<CR>
+vnoremap <leader>tt :call OpenTree()<CR>

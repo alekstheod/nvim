@@ -26,7 +26,7 @@ end
 function M.setup()
 	require("telescope").setup({
 		defaults = {
-            file_ignore_patterns = {"node_modules/*", "eagerlib/*", "tmp/.*", "sorbet/*", "vendor/.*", ".git/.*", ".*/bin/.*", ".*/log/.*", ".bundle/.*" },
+            file_ignore_patterns = {"node_modules/*", ".git/.*" },
 			mappings = {
 				i = {
 					["<esc>"] = actions.close,

@@ -18,5 +18,5 @@ if &diff
     colorscheme evening
 else
     "let g:dracula_colorterm = 1
-    colorscheme custom_paper_color
+    colorscheme jellybeans
 endif

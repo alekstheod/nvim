@@ -18,6 +18,7 @@ set tabstop=4
 set expandtab
 
 set noautochdir
+:set formatoptions-=cro
 
 let g:rooter_patterns = ['Rakefile']
 

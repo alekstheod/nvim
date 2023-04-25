@@ -24,14 +24,14 @@ function M.setup()
 	vim.g.project_path = vim.fn.getcwd()
 	require("nvim-tree").setup({
 		disable_netrw = false,
-		update_cwd = true,
+		update_cwd = false,
 		git = {
 			enable = true,
 			ignore = false,
 			timeout = 400,
 		},
 		view = {
-			width = 30,
+			width = 50,
 			mappings = {
 				list = {
 					{

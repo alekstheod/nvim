@@ -3,6 +3,12 @@ augroup fmt
     autocmd BufWritePre * undojoin | Neoformat
 augroup END
 
+augroup auto_comment
+    au!
+    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup END
+
+
 let g:neoformat_basic_format_align = 1
 let g:neoformat_basic_format_retab = 1
 let g:neoformat_basic_format_trim = 1

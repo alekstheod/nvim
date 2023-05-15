@@ -23,6 +23,7 @@ return require("packer").startup(function(use)
 	use({ "dyng/ctrlsf.vim" })
 	use({ "mechatroner/rainbow_csv" })
 	use({ "junegunn/vim-easy-align" })
+	use({ "MTDL9/vim-log-highlighting" })
 
 	-- treesitter
 	use({
@@ -78,7 +79,7 @@ return require("packer").startup(function(use)
 
 	-- autoformat
 	use({ "google/vim-maktaba" })
-	use({ "atshopify/neoformat" })
+	use({ "sbdchd/neoformat" })
 	--use {"Chiel92/vim-autoformat"}
 	--use {'google/vim-glaive'}
 

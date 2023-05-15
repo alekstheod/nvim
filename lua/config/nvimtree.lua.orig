@@ -4,6 +4,10 @@ function M.grep_at_current_tree_node(node)
 	if not node then
 		return
 	end
+<<<<<<< HEAD
+=======
+
+>>>>>>> 35cbd21 (Migrate to on on-attach in nvimtree)
 	require("telescope.builtin").live_grep(
 		require("telescope.themes").get_ivy({ winblend = 10, search_dirs = { node.absolute_path } })
 	)
@@ -14,6 +18,10 @@ function M.run_vim_command(node, command)
 		return
 	end
 	vim.cmd(command .. " " .. node.absolute_path)
+<<<<<<< HEAD
+	--require("nvim-tree.actions.reloaders.reloaders").reload_explorer()
+	require("nvim-tree.actions.reloaders.reloaders").reload_git()
+=======
 end
 
 local function on_attach(bufnr)
@@ -96,24 +104,54 @@ local function on_attach(bufnr)
 		api.tree.reload()
 	end, opts("Grep here"))
 	-- You will need to insert "your code goes here" for any mappings with a custom action_cb
+>>>>>>> 35cbd21 (Migrate to on on-attach in nvimtree)
 end
 
 function M.setup()
 	vim.g.project_path = vim.fn.getcwd()
 	require("nvim-tree").setup({
 		disable_netrw = false,
+<<<<<<< HEAD
 		update_cwd = false,
+=======
+		update_cwd = true,
 		on_attach = on_attach,
+>>>>>>> 35cbd21 (Migrate to on on-attach in nvimtree)
 		git = {
 			enable = true,
 			ignore = false,
 			timeout = 400,
 		},
-		actions = {
-			open_file = {
-				resize_window = false,
+<<<<<<< HEAD
+		view = {
+			width = 50,
+			mappings = {
+				list = {
+					{
+						key = { "<leader>ag" },
+						cb = ":lua require'config.nvimtree'.grep_at_current_tree_node()<CR>",
+						mode = "n",
+					},
+					{
+						key = { "<leader>ga" },
+						cb = ":lua require'config.nvimtree'.run_vim_command(':G add -f')<CR>",
+						mode = "n",
+					},
+					{
+						key = { "<leader>gr" },
+						cb = ":lua require'config.nvimtree'.run_vim_command(':G reset')<CR>",
+						mode = "n",
+					},
+					{
+						key = { "<leader>gc" },
+						cb = ":lua require'config.nvimtree'.run_vim_command(':G checkout')<CR>",
+						mode = "n",
+					},
+				},
 			},
 		},
+=======
+>>>>>>> 35cbd21 (Migrate to on on-attach in nvimtree)
 	})
 end
 

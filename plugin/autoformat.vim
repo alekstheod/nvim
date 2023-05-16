@@ -24,7 +24,7 @@ let g:neoformat_enabled_typescriptreact = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_lua = ['stylua']
 let g:neoformat_enabled_cpp = ['clangformat']
-let g:neoformat_enabled_cs = ['csharpier']
+"let g:neoformat_enabled_cs = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
 let g:neoformat_enabled_proto = ['clangformat']
 

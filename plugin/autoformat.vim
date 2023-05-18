@@ -1,16 +1,14 @@
-function! Format(file)
-    lua vim.lsp.buf.format()
+function! Format()
+    if(&ft == 'cs')
+        lua vim.lsp.buf.format()
+    else
+        undojoin | Neoformat
+    endif
 endfunction
 
 augroup fmt
     autocmd!
-    autocmd BufWritePre *.cs call Format(expand("%"))
-    autocmd BufWritePre * undojoin | Neoformat
-augroup END
-
-augroup auto_comment
-    au!
-    au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+    autocmd BufWritePre * call Format()
 augroup END
 
 
@@ -29,7 +27,6 @@ let g:neoformat_enabled_typescriptreact = ['prettier']
 let g:neoformat_enabled_javascriptreact = ['prettier']
 let g:neoformat_enabled_lua = ['stylua']
 let g:neoformat_enabled_cpp = ['clangformat']
-"let g:neoformat_enabled_cs = ['clangformat']
 let g:neoformat_enabled_c = ['clangformat']
 let g:neoformat_enabled_proto = ['clangformat']
 

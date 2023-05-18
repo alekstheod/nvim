@@ -1,5 +1,10 @@
+function! Format(file)
+    lua vim.lsp.buf.format()
+endfunction
+
 augroup fmt
     autocmd!
+    autocmd BufWritePre *.cs call Format(expand("%"))
     autocmd BufWritePre * undojoin | Neoformat
 augroup END
 

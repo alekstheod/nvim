@@ -1,4 +1,4 @@
-local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+﻿local install_path = vim.fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 	vim.fn.system({ "git", "clone", "https://github.com/wbthomason/packer.nvim", install_path })
 	vim.cmd("packadd packer.nvim")
@@ -24,6 +24,7 @@ return require("packer").startup(function(use)
 	use({ "mechatroner/rainbow_csv" })
 	use({ "junegunn/vim-easy-align" })
 	use({ "MTDL9/vim-log-highlighting" })
+	use({ "Hoffs/omnisharp-extended-lsp.nvim" })
 
 	-- treesitter
 	use({

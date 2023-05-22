@@ -1,4 +1,4 @@
-function! Format()
+﻿function! Format()
     if(&ft == 'cs')
         lua vim.lsp.buf.format()
     else
@@ -20,7 +20,7 @@ let g:neoformat_enabled_python = ['black']
 let g:neoformat_enabled_ruby = ['rubocop']
 let g:neoformat_enabled_yaml = ['prettier']
 let g:neoformat_enabled_json = ['prettier']
-let g:neoformat_enabled_xml = ['prettier']
+let g:neoformat_enabled_xml = ['xmllint']
 let g:neoformat_enabled_kotlin = ['prettier']
 let g:neoformat_enabled_typescript = ['prettier']
 let g:neoformat_enabled_typescriptreact = ['prettier']

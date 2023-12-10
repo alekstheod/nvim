@@ -23,7 +23,7 @@ return require("packer").startup(function(use)
 	use({ "dyng/ctrlsf.vim" })
 	use({ "mechatroner/rainbow_csv" })
 	use({ "junegunn/vim-easy-align" })
-	use({ "MTDL9/vim-log-highlighting" })
+	use({ "mtdl9/vim-log-highlighting" })
 	use({ "Hoffs/omnisharp-extended-lsp.nvim" })
 
 	-- treesitter
